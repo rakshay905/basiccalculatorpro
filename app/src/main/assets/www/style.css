@@ -1,0 +1,163 @@
+body{
+	font-family: 'Open Sans',sans-serif;
+	background-color: white;
+	display: flex;
+}
+#container{
+	width: 100%;
+	height: 100%;
+	/* background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(bgImg.jpg); */
+	margin: 20px auto;	
+}
+#calculator{
+	// width: 260px;
+	// height: 330px;
+	width: 100%;
+	height: 100%;
+	background-color: #eaedef;
+	margin: 0px;
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	overflow-x: initial;
+	overflow: none;
+}
+#result{
+	height: 120px;
+}
+#history{
+	text-align: right;
+	height: 15px;
+	margin: 0 10px;
+	padding-top: 10px;
+	font-size: 10px;
+	color: #919191;
+}
+#output{
+	text-align: right;
+	height: 50px;
+	margin: 10px 20px;
+	font-size: 20px;
+	line-break: anywhere;
+}
+#keyboard{
+	height: 200px;
+}
+.operator, .number, .empty{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	width: 30px;
+	height: 30px;
+	margin: 6px;
+	float: left;
+	border-radius: 50%;
+	border-width: 0;
+	font-size: 10px;
+}
+.number{
+	background-color: white;
+}
+
+.operator{
+	color: white;
+	background-color: #7d93e0;
+}
+.empty{
+    background-color: #eaedef
+}
+
+.number, .operator{
+	cursor: pointer;
+}
+.operator:active, .number:active{
+	font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+
+button:nth-child(1){
+	font-size: 12px;
+	color: white;
+	background-color: #f08080;
+}
+
+button:nth-child(2){
+	font-size: 12px;
+	color: white;
+	background-color: #7d93e0;
+}
+
+button:nth-child(3){
+	font-size: 12px;
+	color: white;
+	background-color: #ffa500;
+}
+
+button:nth-child(4){
+	font-size: 15px;
+	color: white;
+	background-color: #ffa500;
+}
+button:nth-child(8){
+	font-size: 15px;
+	color: white;
+	background-color: #ffa500;
+}
+button:nth-child(12){
+	font-size: 15px;
+	color: white;
+	background-color: #ffa500;
+}
+button:nth-child(16){
+	font-size: 15px;
+	color: white;
+	background-color: #ffa500;
+}
+button:nth-child(20){
+	font-size: 25px;
+	color: white;
+	background-color: #20b2aa;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 150px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
+  left: 71%;
+  border-radius: 15px;
+  bottom: 30px;
+  font-size: 8px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
