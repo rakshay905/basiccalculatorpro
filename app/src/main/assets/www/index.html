@@ -3,12 +3,15 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
 		<title>A simple calculator</title>
-		<meta name="viewport" content="width=device-width, heigt'device-height, initial-scale=2" /> 
+		<meta name="viewport" content="width=device-width, heigt'device-height, initial-scale=1" /> 
 	</head>
-	<body>
-		111111111111111
+	<body onload="showParams()">
+		<script>
+			function showParams() {
+				console.log('111111111111 ', location.search);
+			}
+		</script>
 	<div id="snackbar">Maximum limit for a value reached!</div>
-		<!-- <div> -->
 			<div id="calculator">
 				<div id="result">
 					<div id="history">
@@ -41,7 +44,6 @@
 					<button class="operator" id="=">=</button>
 				</div>
 			</div>
-		<!-- </div> -->
 		<script src="script.js"></script>
 		<script src="https://kit.fontawesome.com/85bfd97be9.js" crossorigin="anonymous"></script>
 	</body>
