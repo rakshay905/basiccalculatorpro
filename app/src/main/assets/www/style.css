@@ -10,8 +10,8 @@ body{
 	margin: 20px auto;	
 }
 #calculator{
-	// width: 260px;
-	// height: 330px;
+	// width: 320px;
+	// height: 520px;
 	width: 100%;
 	height: 100%;
 	background-color: #eaedef;
@@ -23,35 +23,38 @@ body{
 	overflow: none;
 }
 #result{
-	height: 120px;
+	height: 28%;
 }
 #history{
 	text-align: right;
-	height: 15px;
+	height: 60px;
 	margin: 0 10px;
 	padding-top: 10px;
-	font-size: 10px;
+	font-size: 20px;
 	color: #919191;
+	line-break: anywhere;
 }
 #output{
 	text-align: right;
 	height: 50px;
 	margin: 10px 20px;
-	font-size: 20px;
+	font-size: 30px;
 	line-break: anywhere;
 }
 #keyboard{
-	height: 200px;
+	height: 60%;
+	padding-left: 10px;
+	padding-right: 10px
 }
 .operator, .number, .empty{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-	width: 30px;
-	height: 30px;
-	margin: 6px;
+	width: 20%;
+	height: 16%;
+	margin: 2%;
 	float: left;
 	border-radius: 50%;
 	border-width: 0;
-	font-size: 10px;
+	font-size: 30px;
 }
 .number{
 	background-color: white;
@@ -69,71 +72,71 @@ body{
 	cursor: pointer;
 }
 .operator:active, .number:active{
-	font-size: 13px;
+	font-size: 40px;
 }
 .operator:focus, .number:focus, .empty:focus{
 	outline: 0;
 }
 
 button:nth-child(1){
-	font-size: 12px;
+	font-size: 30px;
 	color: white;
 	background-color: #f08080;
 }
 
 button:nth-child(2){
-	font-size: 12px;
+	font-size: 30px;
 	color: white;
 	background-color: #7d93e0;
 }
 
 button:nth-child(3){
-	font-size: 12px;
+	font-size: 30px;
 	color: white;
 	background-color: #ffa500;
 }
 
 button:nth-child(4){
-	font-size: 15px;
+	font-size: 35px;
 	color: white;
 	background-color: #ffa500;
 }
 button:nth-child(8){
-	font-size: 15px;
+	font-size: 35px;
 	color: white;
 	background-color: #ffa500;
 }
 button:nth-child(12){
-	font-size: 15px;
+	font-size: 35px;
 	color: white;
 	background-color: #ffa500;
 }
 button:nth-child(16){
-	font-size: 15px;
+	font-size: 35px;
 	color: white;
 	background-color: #ffa500;
 }
 button:nth-child(20){
-	font-size: 25px;
+	font-size: 40px;
 	color: white;
 	background-color: #20b2aa;
 }
 
 #snackbar {
   visibility: hidden;
-  min-width: 150px;
+  min-width: 300px;
   margin-left: -125px;
   background-color: #333;
   color: #fff;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 10px;
   position: fixed;
   z-index: 1;
-  left: 71%;
+  left: 40%;
   border-radius: 15px;
   bottom: 30px;
-  font-size: 8px;
+  font-size: 20px;
 }
 
 #snackbar.show {
