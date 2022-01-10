@@ -2,5 +2,9 @@
     <string name="app_name">Basic Calculator</string>
     <string name="App_Id">ca-app-pub-2799588539257898~4672717536</string>
     <string name="interstitial_ad">ca-app-pub-2799588539257898/3359635866</string>
-
+    <string name="contact_us">Contact Us</string>
+    <string name="follow_us">Follow Us</string>
+    <string name="insta">https://www.instagram.com/invites/contact/?i=flpwp5uew4d0&amp;putm_content=mfe0ut7</string>
+    <string name="facebook">https://m.facebook.com/profile.php?id=100071106295717</string>
+    <string name="email">asapps.devs@gmail.com</string>
 </resources>

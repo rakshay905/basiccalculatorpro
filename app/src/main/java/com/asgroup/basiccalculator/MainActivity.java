@@ -1,8 +1,14 @@
 package com.asgroup.basiccalculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
@@ -20,11 +26,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         MobileAds.initialize(this);
+
         createInterstitialAd();
 
-        if (interstitialAd.isLoaded()){
-            interstitialAd.show();
-        }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (interstitialAd.isLoaded()){
+                    interstitialAd.show();
+                }
+            }
+        }, 3000);
+
 
         WebView webview = (WebView)findViewById(R.id.webview);
         webview.setWebChromeClient(new WebChromeClient());
@@ -38,4 +51,34 @@ public class MainActivity extends AppCompatActivity {
         interstitialAd.setAdUnitId(getString(R.string.interstitial_ad));
         interstitialAd.loadAd(new AdRequest.Builder().build());
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+
+        switch(itemId){
+
+            case R.id.contact_us: {
+                startActivity(new Intent(MainActivity.this, ContactUsActivity.class));
+                return true;
+            }
+            case R.id.our_apps: {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/search?q=pub%3AA-S%20Apps&c=apps")));
+                return true;
+            }
+
+        }
+
+        return false;
+
+    }
+
+
 }
